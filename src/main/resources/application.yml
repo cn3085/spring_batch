@@ -2,6 +2,8 @@ spring:
   profiles:
     active: local
 
+spring.batch.job.names: ${job.name:NONE}
+
 ---
 spring:
   profiles: local
@@ -19,4 +21,4 @@ spring:
       jdbc-url: jdbc:mysql://localhost:3306/spring_batch?characterEncoding=UTF-8&serverTimezone=UTC
       username: root
       password: 1234
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
